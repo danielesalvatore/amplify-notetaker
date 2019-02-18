@@ -74,9 +74,8 @@ class App extends Component {
                 const updateNotes = [...prevNotes, newNote];
 
                 this.setState({notes: updateNotes});
-                console.log("noteData", noteData)
             }
-        })
+        });
 
         this.deleteNoteListener = API.graphql(graphqlOperation(onDeleteNote)).subscribe({
             next: noteData => {
